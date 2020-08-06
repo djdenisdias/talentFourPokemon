@@ -1,0 +1,47 @@
+<div class="pokemon-detail">
+	<img src={{detail.card.imageUrlHiRes}} alt={{detail.card.name}}>
+	<div class="pokemon-info">
+		<p class="name">{{ detail.card.name}}</p>
+		<p class="id">ID: {{ detail.card.id}}</p>
+
+		<div *ngIf="detail.card.types">
+			<div class="pokemon-types">
+				<p class="title">Tipo(s): </p>
+				<div class="pokemon-group">
+					<p class="pokemon-type" *ngFor="let type of detail.card.types">{{ type }}</p>
+				</div>
+			</div>
+		</div>
+		<div *ngIf="detail.card.attacks">
+			<div class="pokemon-box">
+				<p class="title">Ataque(s)</p>
+				<div class="pokemon-sub-box" *ngFor="let attack of detail.card.attacks">
+					<p class="text">{{ attack.name }}</p>
+					<p class="text"><span class="label">Dano: </span>{{ attack.damage }}</p>
+					<p class="text"><span class="label">Custo: </span><span *ngFor="let cost of attack.cost">{{ cost }} </span></p>
+					<p class="text"><span class="label">Descrição: </span>{{ attack.text }}</p>
+				</div>
+			</div>
+		</div>
+		
+		<div *ngIf="detail.card.resistance">
+			<div class="pokemon-box">
+				<p class="title">Resistências</p>
+				<div class="pokemon-group" *ngFor="let res of detail.card.resistances">
+					<p class="text"><span class="label">{{ res.type }}: </span></p>
+					<p class="text">{{ res.value }}</p>
+				</div>
+			</div>
+		</div>
+
+		<div *ngIf="detail.card.weaknesses">
+			<div class="pokemon-box">
+				<p class="title">Fraquezas</p>
+				<div class="pokemon-group" *ngFor="let weak of detail.card.weaknesses">
+					<p class="text"><span class="label">{{ weak.type }}: </span></p>
+					<p class="text">{{ weak.value }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

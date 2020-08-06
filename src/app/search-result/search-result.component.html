@@ -1,0 +1,13 @@
+<div class="search-result-container">
+	<div class="title">Resultado da busca</div>
+	<ul class="card-list">
+		<li *ngFor="let card of cards">
+			<div class="card-box" (click)="showDetails(card.id)" >
+				<img src={{card.imageUrl}} >
+				<p><span class="label">Nome: </span> <span class="data">{{card.name}}</span></p>
+				<p><span class="label">ID: </span> <span class="data">{{card.id}}</span></p>
+				<p><span class="label">Tipo: </span> <span class="data" *ngFor="let type of card.types">{{type}} </span></p>
+			</div>
+		</li>
+	</ul>
+</div>

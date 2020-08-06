@@ -1,0 +1,26 @@
+<div class="main-container">
+	<div class="title">Pokemon Cards</div>
+	<div class="search-container">
+		<input
+			type="text"
+			class="search"
+			name="pokemon"
+			placeholder="Procurar por nome"
+			[(ngModel)]="pokemonName"
+			>
+		<div class="btn-search" (click)="searchByName()">
+			<img src="../../assets/pkbl.png" alt="">
+		</div>
+	</div>
+
+	<ul class="card-list">
+		<li *ngFor="let card of cards">
+			<div class="card-box" (click)="showDetails(card.id)" >
+				<img src={{card.imageUrl}} >
+				<p><span class="label">Nome: </span> <span class="data">{{card.name}}</span></p>
+				<p><span class="label">ID: </span> <span class="data">{{card.id}}</span></p>
+				<p><span class="label">Tipo: </span> <span class="data" *ngFor="let type of card.types">{{type}} </span></p>
+			</div>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,72 @@
+.main-container{
+
+    padding: 10px;
+
+    .title {
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+
+        input {
+            height: 30px;
+            width: 180px;
+        }
+
+        .btn-search {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            justify-content: center;
+            margin-left: 10px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-evenly;
+
+        .card-box{
+            cursor: pointer;
+            margin: 10px 0;
+            box-shadow: 0px 0px 8px 10px #365596;
+            padding: 15px;
+            border-radius: 2px;
+
+            p {
+                line-height: 1.4;
+            }
+
+            .label {
+                font-weight: bold;
+                font-size: 16px;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        
+            .data {
+                font-size: 16px;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+
+        
+    }
+}

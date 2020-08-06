@@ -1,0 +1,5 @@
+https://api.pokemontcg.io/v1/cards
+
+###
+
+http://api.pokemontcg.io/v1/cards?name=charizard
